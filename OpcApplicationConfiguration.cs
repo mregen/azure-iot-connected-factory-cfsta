@@ -342,8 +342,7 @@ namespace CfStation
             // UserTokenPolicies
             _configuration.ServerConfiguration.UserTokenPolicies.Add(new UserTokenPolicy() { TokenType = UserTokenType.Anonymous });
             _configuration.ServerConfiguration.UserTokenPolicies.Add(new UserTokenPolicy() { TokenType = UserTokenType.UserName });
-
-            Logger.Information($"Security policy {newPolicy.SecurityPolicyUri} with mode {newPolicy.SecurityMode} added");
+            Logger.Information($"User token policy Anonymous and UserName added.");
 
             // validate the configuration now
             await _configuration.Validate(_configuration.ApplicationType);
